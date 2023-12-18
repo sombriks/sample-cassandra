@@ -4,6 +4,36 @@
 
 Sampling minimal configuration to work with Apache Cassandra
 
+## Requirements
+
+- java 17
+- gradle 8.5
+- docker 20 or newer
+- a modern ide (intellij ultimate)
+
+## How to run
+
+First spin up a cassandra server with docker compose:
+
+```bash
+docker compose -f src/infrastructure/docker-compose.yml up
+```
+
+Then start the project either using the ide or using gradle wrapper
+
+```bash
+./gradlew bootRun
+```
+
+Note: if this error occurs:
+
+```bash 
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [org/springframework/boot/autoconfigure/cassandra/CassandraAutoConfiguration.class]: Failed to instantiate [com.datastax.oss.driver.api.core.CqlSession]: Factory method 'cassandraSession' threw exception with message: Invalid keyspace spring_cassandra
+```
+
+You will need to manually create the cassandra keyspace. there is a [test script](src/test/resources/initial.cql)
+That you can use to prepare cassandra database.
+
 ## Reference Documentation
 
 For further reference, please consider the following sections:
