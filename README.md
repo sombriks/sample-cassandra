@@ -1,5 +1,7 @@
 # Sample Cassandra
 
+[![CI with Gradle](https://github.com/sombriks/sample-cassandra/actions/workflows/gradle.yml/badge.svg)](https://github.com/sombriks/sample-cassandra/actions/workflows/gradle.yml)
+
 Sampling minimal configuration to work with Apache Cassandra
 
 ### Reference Documentation
