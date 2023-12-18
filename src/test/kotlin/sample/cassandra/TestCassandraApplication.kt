@@ -16,9 +16,5 @@ class TestCassandraApplication {
 	fun cassandraContainer(): CassandraContainer<*> {
 		return CassandraContainer(DockerImageName.parse("cassandra:latest"))
 	}
-
 }
 
-fun main(args: Array<String>) {
-	fromApplication<CassandraApplication>().with(TestCassandraApplication::class).run(*args)
-}
