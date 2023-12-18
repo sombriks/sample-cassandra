@@ -4,7 +4,7 @@
 
 Sampling minimal configuration to work with Apache Cassandra
 
-### Reference Documentation
+## Reference Documentation
 
 For further reference, please consider the following sections:
 
@@ -17,7 +17,8 @@ For further reference, please consider the following sections:
 * [Spring Data for Apache Cassandra](https://docs.spring.io/spring-boot/docs/3.2.0/reference/htmlsingle/index.html#data.nosql.cassandra)
 * [Testcontainers](https://java.testcontainers.org/)
 
-### Guides
+## Guides
+
 The following guides illustrate how to use some features concretely:
 
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
@@ -25,12 +26,13 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [Spring Data for Apache Cassandra](https://spring.io/guides/gs/accessing-data-cassandra/)
 
-### Additional Links
+## Additional Links
+
 These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
-### Testcontainers support
+## Testcontainers support
 
 This project uses [Testcontainers at development time](https://docs.spring.io/spring-boot/docs/3.2.0/reference/html/features.html#features.testing.testcontainers.at-development-time).
 
