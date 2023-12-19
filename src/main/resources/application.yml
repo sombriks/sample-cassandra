@@ -1,10 +1,18 @@
 spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:aws}
   cassandra:
-    schema-action: CREATE_IF_NOT_EXISTS
+#    schema-action: CREATE_IF_NOT_EXISTS # Creates the tables
     local-datacenter: datacenter1
-    keyspace-name: spring_cassandra
+    keyspace-name: spring_cassandra # must exist to make it work
     request:
       timeout: 10s
     connection:
       connect-timeout: 10s
       init-query-timeout: 10s
+logging:
+  level:
+    web: debug
+    org:
+      springframework:
+        data: debug

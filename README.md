@@ -32,7 +32,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 ```
 
 You will need to manually create the cassandra keyspace. there is a [test script](src/test/resources/initial.cql)
-That you can use to prepare cassandra database.
+that you can use to prepare cassandra database.
 
 ## Reference Documentation
 
