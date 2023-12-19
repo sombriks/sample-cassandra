@@ -1,0 +1,7 @@
+spring:
+  cassandra:
+    #    schema-action: CREATE_IF_NOT_EXISTS # Creates the tables base on models
+    local-datacenter: datacenter1
+    keyspace-name: spring_cassandra # must exist already
+    connection:
+      connect-timeout: 5s

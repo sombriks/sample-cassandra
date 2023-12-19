@@ -1,0 +1,11 @@
+spring:
+  cassandra:
+    keyspace-name: ${CASSANDRA_KEYSPACE_NAME}
+    schema-action: NONE
+    username: ${CASSANDRA_USERNAME}
+    password: ${CASSANDRA_PASSWORD}
+    config: classpath:cassandra.conf
+    # see https://github.com/aws-samples/amazon-keyspaces-examples/tree/main/java/datastax-v4/spring
+
+
+

@@ -34,6 +34,44 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 You will need to manually create the cassandra keyspace. there is a [test script](src/test/resources/initial.cql)
 that you can use to prepare cassandra database.
 
+## Testing
+
+There are a few test samples using testcontainers, so you don't need to manually
+create and run cassandra:
+
+```bash
+./gradlew test
+```
+
+It also allows CI to run with no external dependencies, which is the correct way
+to do CI runs. See [gradle.yml](.github/workflows/gradle.yml) for details.
+
+## AWS Keyspaces
+
+One thing is regular cassandra. Another beast is [AWS Keyspaces](https://console.aws.amazon.com/keyspaces).
+
+Using the [sample project](https://github.com/aws-samples/amazon-keyspaces-examples/tree/main/java/datastax-v4/spring)
+as reference, [this configuration](src/main/resources/application-aws.yml) was
+made for better reuse in future.
+
+In order to proper get this working, you must provide the following environment
+variables:
+
+```bash
+AWS_ACCESS_KEY_ID=<aws account id>
+AWS_SECRET_ACCESS_KEY=<aws account key>
+CASSANDRA_KEYSPACE_NAME=<cassandra keyspace>
+CASSANDRA_USERNAME=<service account user>
+CASSANDRA_PASSWORD=<service account password>
+```
+
+Then you can configure the IDE to run with the aws profile. Or try this command
+line:
+
+```bash
+./gradlew bootRun --args="--spring.profiles.active=aws"
+```
+
 ## Reference Documentation
 
 For further reference, please consider the following sections:
@@ -64,7 +102,8 @@ These additional references should also help you:
 
 ## Testcontainers support
 
-This project uses [Testcontainers at development time](https://docs.spring.io/spring-boot/docs/3.2.0/reference/html/features.html#features.testing.testcontainers.at-development-time).
+This project
+uses [Testcontainers at development time](https://docs.spring.io/spring-boot/docs/3.2.0/reference/html/features.html#features.testing.testcontainers.at-development-time).
 
 Testcontainers has been configured to use the following Docker images:
 

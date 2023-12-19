@@ -1,1 +1,1 @@
-rootProject.name = "cassandra"
+rootProject.name = "sample-cassandra"
